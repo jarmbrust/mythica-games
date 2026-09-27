@@ -1,0 +1,17 @@
+{
+  "name": "mythica-games",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": ">=24.21.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --filter frontend build",
+    "start": "pnpm --filter frontend start",
+    "lint": "pnpm --filter frontend lint",
+    "typecheck": "pnpm --filter frontend typecheck",
+    "format": "pnpm --filter frontend format"
+  }
+}

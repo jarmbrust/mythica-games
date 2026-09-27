@@ -1,0 +1,43 @@
+# dependencies
+node_modules/
+.pnp/
+.pnp.js
+dist/
+build/
+
+# env
+.env
+.env.local
+.env.development
+.env.test
+.env.*.local
+.env.*
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+*.pem
+*.tsbuildinfo
+
+# next.js
+.next/
+out/
+
+# vercel
+.vercel
+
+# internal / private notes
+_internal_docs/
+
+# editors
+.vscode/
+.zed/
+.idea/
+*.swp
+*.swo
+*~
