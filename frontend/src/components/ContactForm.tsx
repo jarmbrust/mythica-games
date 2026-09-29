@@ -1,68 +1,113 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useRef, useState } from 'react';
 
-import type { FieldErrors } from "@/lib/contact-schema";
+import type { FieldErrors } from '@/lib/contact-schema';
 
-type Status = "idle" | "submitting" | "success" | "error";
+type Status = 'idle' | 'submitting' | 'success' | 'error';
+
+type ContactApiSuccess = { ok: true };
+type ContactApiFailure = {
+  ok: false;
+  message?: string;
+  fieldErrors?: FieldErrors;
+};
+type ContactApiResponse = ContactApiSuccess | ContactApiFailure;
+
+/**
+ * Guards against non-JSON or misshapen bodies (e.g. a proxy's HTML error
+ * page) so `JSON.parse` output is checked before we trust its shape.
+ */
+function isContactApiResponse(value: unknown): value is ContactApiResponse {
+  if (typeof value !== 'object' || value === null) {
+    return false;
+  }
+  return typeof (value as { ok?: unknown }).ok === 'boolean';
+}
 
 const inputClasses =
-  "w-full rounded-md border border-surface-border bg-surface px-3 py-2 text-sm text-foreground placeholder:text-foreground-muted focus:border-accent focus:outline-none";
+  'w-full rounded-md border border-surface-border bg-surface px-3 py-2 text-sm text-foreground placeholder:text-foreground-muted focus:border-accent focus:outline-none';
 
 export function ContactForm() {
-  const [status, setStatus] = useState<Status>("idle");
-  const [message, setMessage] = useState<string>("");
+  const [status, setStatus] = useState<Status>('idle');
+  const [message, setMessage] = useState<string>('');
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  // Synchronous in-flight guard: state-based checks re-render too slowly to
+  // catch a same-tick double submit.
+  const submitLock = useRef(false);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("submitting");
-    setMessage("");
+    if (submitLock.current) {
+      return;
+    }
+    submitLock.current = true;
+    setStatus('submitting');
+    setMessage('');
     setFieldErrors({});
 
     const form = event.currentTarget;
     const data = new FormData(form);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: data.get("name"),
-          email: data.get("email"),
-          subject: data.get("subject"),
-          message: data.get("message"),
-          company: data.get("company"),
+          name: data.get('name'),
+          email: data.get('email'),
+          subject: data.get('subject'),
+          message: data.get('message'),
+          company: data.get('company'),
         }),
       });
 
-      const payload = await response.json();
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(await response.text());
+      } catch {
+        // Non-JSON body (e.g. a proxy's HTML error page) — treat as
+        // an unexpected response, not a network failure.
+        parsed = undefined;
+      }
 
-      if (!response.ok) {
-        setStatus("error");
+      if (!isContactApiResponse(parsed)) {
+        setStatus('error');
         setMessage(
-          payload.message ?? "Something went wrong. Please try again.",
+          'The server returned an unexpected response. Please try again.',
         );
-        setFieldErrors(payload.fieldErrors ?? {});
+        return;
+      }
+
+      // The body's `ok` mirrors the status code: every response from the
+      // route handler, including validation failures and 429s, carries it.
+      if (!parsed.ok) {
+        setStatus('error');
+        setMessage(parsed.message ?? 'Something went wrong. Please try again.');
+        setFieldErrors(parsed.fieldErrors ?? {});
         return;
       }
 
       form.reset();
-      setStatus("success");
-      setMessage("Thanks — your message is on its way.");
+      setStatus('success');
+      setMessage('Thanks — your message is on its way.');
     } catch {
-      setStatus("error");
-      setMessage("Could not reach the server. Please try again.");
+      setStatus('error');
+      setMessage('Could not reach the server. Please try again.');
+    } finally {
+      submitLock.current = false;
     }
   }
 
-  if (status === "success") {
+  if (status === 'success') {
     return (
       <div className="rounded-lg border border-surface-border bg-surface-raised p-6">
-        <p className="text-sm font-medium text-foreground">{message}</p>
+        <p role="status" className="text-sm font-medium text-foreground">
+          {message}
+        </p>
         <button
           type="button"
-          onClick={() => setStatus("idle")}
+          onClick={() => setStatus('idle')}
           className="mt-4 text-sm font-medium text-accent hover:text-accent-hover"
         >
           Send another message
@@ -92,9 +137,12 @@ export function ContactForm() {
           autoComplete="name"
           className={`mt-1.5 ${inputClasses}`}
           aria-invalid={Boolean(fieldErrors.name)}
+          aria-describedby={fieldErrors.name ? 'name-error' : undefined}
         />
         {fieldErrors.name ? (
-          <p className="mt-1.5 text-sm text-red-400">{fieldErrors.name}</p>
+          <p id="name-error" className="mt-1.5 text-sm text-red-400">
+            {fieldErrors.name[0]}
+          </p>
         ) : null}
       </div>
 
@@ -112,9 +160,12 @@ export function ContactForm() {
           autoComplete="email"
           className={`mt-1.5 ${inputClasses}`}
           aria-invalid={Boolean(fieldErrors.email)}
+          aria-describedby={fieldErrors.email ? 'email-error' : undefined}
         />
         {fieldErrors.email ? (
-          <p className="mt-1.5 text-sm text-red-400">{fieldErrors.email}</p>
+          <p id="email-error" className="mt-1.5 text-sm text-red-400">
+            {fieldErrors.email[0]}
+          </p>
         ) : null}
       </div>
 
@@ -131,9 +182,12 @@ export function ContactForm() {
           type="text"
           className={`mt-1.5 ${inputClasses}`}
           aria-invalid={Boolean(fieldErrors.subject)}
+          aria-describedby={fieldErrors.subject ? 'subject-error' : undefined}
         />
         {fieldErrors.subject ? (
-          <p className="mt-1.5 text-sm text-red-400">{fieldErrors.subject}</p>
+          <p id="subject-error" className="mt-1.5 text-sm text-red-400">
+            {fieldErrors.subject[0]}
+          </p>
         ) : null}
       </div>
 
@@ -150,13 +204,16 @@ export function ContactForm() {
           rows={6}
           className={`mt-1.5 resize-y ${inputClasses}`}
           aria-invalid={Boolean(fieldErrors.message)}
+          aria-describedby={fieldErrors.message ? 'message-error' : undefined}
         />
         {fieldErrors.message ? (
-          <p className="mt-1.5 text-sm text-red-400">{fieldErrors.message}</p>
+          <p id="message-error" className="mt-1.5 text-sm text-red-400">
+            {fieldErrors.message[0]}
+          </p>
         ) : null}
       </div>
 
-      {status === "error" && message ? (
+      {status === 'error' && message ? (
         <p role="alert" className="text-sm text-red-400">
           {message}
         </p>
@@ -164,10 +221,10 @@ export function ContactForm() {
 
       <button
         type="submit"
-        disabled={status === "submitting"}
+        disabled={status === 'submitting'}
         className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending…" : "Send message"}
+        {status === 'submitting' ? 'Sending…' : 'Send message'}
       </button>
     </form>
   );

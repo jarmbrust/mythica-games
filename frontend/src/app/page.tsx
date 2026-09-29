@@ -1,14 +1,14 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { Container } from "@/components/Container";
-import { GameCard } from "@/components/GameCard";
-import { SectionHeading } from "@/components/SectionHeading";
-import { games } from "@/content/games";
-import { site } from "@/content/site";
-import { discordInvite } from "@/content/socials";
+import { Container } from '@/components/Container';
+import { GameCard } from '@/components/GameCard';
+import { SectionHeading } from '@/components/SectionHeading';
+import { games } from '@/content/games';
+import { site } from '@/content/site';
+import { discordInvite } from '@/content/socials';
 
 export default function HomePage() {
-  const featured = games.filter((game) => game.status !== "archived");
+  const featured = games.filter((game) => game.status !== 'archived');
 
   return (
     <>

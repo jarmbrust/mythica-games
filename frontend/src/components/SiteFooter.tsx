@@ -1,7 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { nav, site } from "@/content/site";
-import { socials } from "@/content/socials";
+import { CopyrightYear } from '@/components/CopyrightYear';
+import { nav, site } from '@/content/site';
+import { socials } from '@/content/socials';
 
 export function SiteFooter() {
   return (
@@ -45,7 +46,7 @@ export function SiteFooter() {
         </ul>
 
         <p className="mt-8 text-sm text-foreground-muted">
-          &copy; {new Date().getFullYear()} {site.name}
+          &copy; <CopyrightYear /> {site.name}
         </p>
       </div>
     </footer>

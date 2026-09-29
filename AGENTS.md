@@ -53,9 +53,15 @@ confined to these modules. This is also the seam for a future database.
 ## Conventions
 
 - Order of operations: **typecheck → lint → build**
-- Components are Server Components unless marked `'use client'`. `ContactForm` is
-  currently the only client component — keep it that way unless there is a
-  concrete reason.
+- Components are Server Components unless marked `'use client'`. `ContactForm`
+  and `CopyrightYear` are the only client components — keep it that way unless
+  there is a concrete reason. (`ContactForm` needs form state; `CopyrightYear`
+  renders the visitor's current year, which the static server render cannot
+  know.)
+- String quoting follows the Airbnb convention via `.prettierrc`: single quotes
+  in JS/TS string literals, double quotes in JSX attribute values
+  (`singleQuote: true`, `jsxSingleQuote: false`). JSON is always double-quoted
+  by spec and is not affected by either setting.
 - Commit `pnpm-lock.yaml`.
 - Pages and the sitemap both derive from `nav` in `content/site.ts`. Adding a
   route means adding one entry there.
@@ -87,9 +93,11 @@ confined to these modules. This is also the seam for a future database.
 
 - **The contact honeypot must not fail validation.** The hidden `company` field is
   an ordinary optional field in the schema and is checked separately in the route
-  handler. If it is given a `z.string().max(0)` constraint, the 400 response
-  includes a field error naming the trap, which tells bot authors exactly how the
-  form is protected. It must return a plain `200`.
+  handler. If it is given a `z.string().max(0)` constraint, the validation error
+  names the trap, which tells bot authors exactly how the form is protected.
+  Defense in depth: the route handler filters validation responses to the four
+  visible fields, so the trap name never appears in any response body. The
+  honeypot path itself must return a plain `200`.
 
 - **`replyTo` on contact emails must stay set to the submitter.** Without it,
   replies loop through the team instead of reaching the sender.

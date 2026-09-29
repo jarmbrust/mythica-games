@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
 export function Container({
   children,
-  className = "",
+  className = '',
 }: {
   children: ReactNode;
   className?: string;

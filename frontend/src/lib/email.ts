@@ -1,19 +1,19 @@
-import { Resend } from "resend";
+import { Resend } from 'resend';
 
-import type { ContactInput } from "./contact-schema";
+import type { ContactInput } from './contact-schema';
 
 export type SendResult =
-  | { status: "sent" }
-  | { status: "skipped"; reason: string }
-  | { status: "failed"; reason: string };
+  | { status: 'sent' }
+  | { status: 'skipped'; reason: string }
+  | { status: 'failed'; reason: string };
 
 function escapeHtml(value: string): string {
   return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 function buildHtml(input: ContactInput): string {
@@ -35,9 +35,9 @@ function buildHtml(input: ContactInput): string {
       <tr>
         <td style="padding-top:16px;">
           <table role="presentation" style="width:100%;border-collapse:collapse;font-size:14px;">
-            ${row("Name", input.name)}
-            ${row("Email", input.email)}
-            ${row("Subject", input.subject)}
+            ${row('Name', input.name)}
+            ${row('Email', input.email)}
+            ${row('Subject', input.subject)}
           </table>
         </td>
       </tr>
@@ -54,20 +54,20 @@ function buildHtml(input: ContactInput): string {
 
 function buildText(input: ContactInput): string {
   return [
-    "New contact form submission",
-    "",
+    'New contact form submission',
+    '',
     `Name: ${input.name}`,
     `Email: ${input.email}`,
     `Subject: ${input.subject}`,
-    "",
-    "Message:",
+    '',
+    'Message:',
     input.message,
-  ].join("\n");
+  ].join('\n');
 }
 
 function getRecipients(): string[] {
-  return (process.env.CONTACT_TO_EMAIL ?? "")
-    .split(",")
+  return (process.env.CONTACT_TO_EMAIL ?? '')
+    .split(',')
     .map((address) => address.trim())
     .filter(Boolean);
 }
@@ -81,7 +81,7 @@ export async function sendContactEmail(
 
   if (!apiKey || !from || recipients.length === 0) {
     return {
-      status: "skipped",
+      status: 'skipped',
       reason: `Missing configuration (apiKey=${Boolean(apiKey)}, from=${Boolean(from)}, recipients=${recipients.length}).`,
     };
   }
@@ -98,8 +98,8 @@ export async function sendContactEmail(
   });
 
   if (error) {
-    return { status: "failed", reason: error.message };
+    return { status: 'failed', reason: error.message };
   }
 
-  return { status: "sent" };
+  return { status: 'sent' };
 }

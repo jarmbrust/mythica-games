@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import { contactEmail, discordInvite, socials } from "@/content/socials";
+import { contactEmail, discordInvite, socials } from '@/content/socials';
 
 function Card({
   icon,
@@ -18,8 +18,8 @@ function Card({
   return (
     <a
       href={href}
-      rel={external ? "noopener noreferrer" : undefined}
-      target={external ? "_blank" : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+      target={external ? '_blank' : undefined}
       className="group flex items-start gap-4 rounded-lg border border-surface-border bg-surface-raised p-5 transition-colors hover:border-accent"
     >
       <span className="mt-0.5 shrink-0 text-accent">{icon}</span>
@@ -52,7 +52,7 @@ export function ContactCards() {
         href={discordInvite}
       />
       {socials
-        .filter((social) => social.label !== "Discord")
+        .filter((social) => social.label !== 'Discord')
         .map((social) => (
           <Card
             key={social.label}

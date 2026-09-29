@@ -72,6 +72,13 @@ followed by a `typescript-eslint` release that widens its peer range. At that
 point the upgrade is a single devDependency change. The site has no large
 codebase, so there is no performance argument for moving sooner.
 
+**Watch item.** Re-check the `typescript-eslint` peer range on each release.
+As of 2026-09-27 the latest release (8.71.0) still declares
+`typescript: ">=4.8.4 <6.1.0"`. The manifest pins `typescript@6.0.3` exactly:
+a caret range would allow a hypothetical 6.1.0, and 6.x is the last line with
+the legacy compiler API, so a security backport is the one plausible 6.x
+release. An exact pin makes the load-bearing constraint airtight.
+
 ## 2. Custom ESLint config, not `eslint-config-next`
 
 **Decision.** Hand-rolled flat config using `@next/eslint-plugin-next`,

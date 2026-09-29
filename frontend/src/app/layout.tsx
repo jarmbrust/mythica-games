@@ -1,22 +1,22 @@
-import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import type { Metadata } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
-import { site, siteUrl } from "@/content/site";
+import { SiteFooter } from '@/components/SiteFooter';
+import { SiteHeader } from '@/components/SiteHeader';
+import { site, siteUrl } from '@/content/site';
 
-import "./globals.css";
+import './globals.css';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono-code",
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-mono-code',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -27,17 +27,17 @@ export const metadata: Metadata = {
   },
   description: site.description,
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
   openGraph: {
-    type: "website",
+    type: 'website',
     url: siteUrl,
     siteName: site.name,
     title: site.name,
     description: site.description,
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: site.name,
     description: site.description,
   },

@@ -1,4 +1,4 @@
-export type GameStatus = "live" | "in-development" | "archived";
+export type GameStatus = 'live' | 'in-development' | 'archived';
 
 export type Game = {
   slug: string;
@@ -9,45 +9,45 @@ export type Game = {
 };
 
 export const statusLabels: Record<GameStatus, string> = {
-  live: "Live",
-  "in-development": "In Development",
-  archived: "Archived",
+  live: 'Live',
+  'in-development': 'In Development',
+  archived: 'Archived',
 };
 
 export const games: readonly Game[] = [
   {
-    slug: "placeholder-game-one",
-    title: "TODO: Game Title One",
+    slug: 'placeholder-game-one',
+    title: 'TODO: Game Title One',
     summary:
-      "TODO: one or two sentences describing what this game is and who it is for.",
-    status: "live",
+      'TODO: one or two sentences describing what this game is and who it is for.',
+    status: 'live',
     links: [
-      { label: "Play", href: "https://example.com/your-game-here" },
-      { label: "Source", href: "https://github.com/your-org-here" },
+      { label: 'Play', href: 'https://example.com/your-game-here' },
+      { label: 'Source', href: 'https://github.com/your-org-here' },
     ],
   },
   {
-    slug: "placeholder-game-two",
-    title: "TODO: Game Title Two",
+    slug: 'placeholder-game-two',
+    title: 'TODO: Game Title Two',
     summary:
-      "TODO: one or two sentences describing what this game is and who it is for.",
-    status: "live",
-    links: [{ label: "Play", href: "https://example.com/your-game-here" }],
+      'TODO: one or two sentences describing what this game is and who it is for.',
+    status: 'live',
+    links: [{ label: 'Play', href: 'https://example.com/your-game-here' }],
   },
   {
-    slug: "placeholder-game-three",
-    title: "TODO: Game Title Three",
+    slug: 'placeholder-game-three',
+    title: 'TODO: Game Title Three',
     summary:
-      "TODO: one or two sentences describing what this game is and who it is for.",
-    status: "in-development",
-    links: [{ label: "Devlog", href: "https://example.com/your-devlog-here" }],
+      'TODO: one or two sentences describing what this game is and who it is for.',
+    status: 'in-development',
+    links: [{ label: 'Devlog', href: 'https://example.com/your-devlog-here' }],
   },
   {
-    slug: "placeholder-game-four",
-    title: "TODO: Game Title Four",
+    slug: 'placeholder-game-four',
+    title: 'TODO: Game Title Four',
     summary:
-      "TODO: one or two sentences describing what this game is and why it is no longer maintained.",
-    status: "archived",
+      'TODO: one or two sentences describing what this game is and why it is no longer maintained.',
+    status: 'archived',
     links: [],
   },
 ];
