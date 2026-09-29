@@ -56,3 +56,11 @@ export function checkRateLimit(
   bucket.count += 1;
   return true;
 }
+
+/**
+ * Clears all buckets. Exists for tests: the module-scoped map persists between
+ * test cases in a single process, so each test calls this in `beforeEach`.
+ */
+export function resetRateLimits(): void {
+  buckets.clear();
+}

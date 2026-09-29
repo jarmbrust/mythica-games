@@ -24,6 +24,7 @@ Conclusions only — this file is safe to keep in a public repository.
 | 9  | `src/` directory over flat app root | Applied |
 | 10 | Typed TS content over Markdown/MDX | Applied |
 | 11 | In-memory rate limiting over a shared store | Applied |
+| 12 | Vitest over Jest and Playwright-first | Applied |
 
 ---
 
@@ -221,6 +222,25 @@ accurate cross-instance quotas. The upgrade path is a shared store (Upstash
 Ratelimit), Vercel Firewall rules if the plan tier allows it, and Turnstile for
 interactive challenge — see the Deferred table.
 
+## 12. Vitest over Jest and Playwright-first
+
+**Decision.** Vitest for unit tests of `src/lib/` and the contact route
+handler. Coverage is scoped, not global: the gate is 80% lines on `src/lib/**`
+and `src/app/api/**`, with no threshold on components or content modules.
+
+**Why.** The testable surface today is pure logic — the contact schema, the
+rate limiter, the email builder, and the route handler — none of which needs a
+browser or the Next.js runtime. Vitest runs on the Vite toolchain the team
+already knows, is ESM-native, and tests the route handler against a plain
+`Request` without spinning up a server. Jest would add a second transpilation
+stack for no benefit. Playwright was deferred: the only interactive surface is
+the contact form, and an E2E suite is maintenance overhead until the site is
+live end-to-end.
+
+**What would change this.** A React component test (Testing Library + jsdom)
+when the form accumulates more client logic, and a Playwright smoke test after
+launch. Both slot into the same Vitest seam.
+
 ---
 
 ## Deferred
@@ -231,6 +251,7 @@ interactive challenge — see the Deferred table.
 | Verify `send.mythica.games` in Resend | The alias is created and the MX conflict becomes live         |
 | Add Cloudflare Turnstile            | Honeypot or in-memory rate limiting proves insufficient in production |
 | Move rate limiting to a shared store | Sustained or distributed abuse, or cross-instance quotas needed |
+| Add a component test for `ContactForm` | The form accumulates more client logic                            |
+| Add a Playwright E2E smoke test     | The site is live end-to-end                                      |
 | Scope the `backend/` service        | Blog posts or forum requirements are defined                    |
 | Upgrade to TypeScript 7             | TypeScript 7.1 API ships and `typescript-eslint` widens its peer range |
-| Add a test framework                | Logic accumulates beyond the contact schema                    |
