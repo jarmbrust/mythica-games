@@ -30,6 +30,7 @@ pnpm dev                                          # dev server
 pnpm build                                        # production build
 pnpm typecheck                                    # tsc --noEmit
 pnpm lint                                         # eslint
+pnpm test                                         # vitest run
 pnpm format                                       # prettier --write
 ```
 

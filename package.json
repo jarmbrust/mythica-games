@@ -12,6 +12,7 @@
     "start": "pnpm --filter frontend start",
     "lint": "pnpm --filter frontend lint",
     "typecheck": "pnpm --filter frontend typecheck",
+    "test": "pnpm --filter frontend test",
     "format": "pnpm --filter frontend format"
   }
 }
