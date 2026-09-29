@@ -12,6 +12,7 @@ build/
 .env.test
 .env.*.local
 .env.*
+!.env.example
 
 # logs
 *.log

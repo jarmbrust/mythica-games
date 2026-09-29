@@ -9,7 +9,7 @@
 
 | Version | Date | Notes |
 | ------- | ---- | ----- |
-| 1.1 | 2026-09-27 | Contact form: per-IP rate limiting; subject restricted to a single line; validation responses never name the honeypot field. |
+| 1.1 | 2026-09-27 | Contact form: per-IP rate limiting; subject restricted to a single line; validation responses never name the honeypot field. Footer year is client-rendered so it tracks the visitor's local date. |
 | 1.0 | 2026-09-26 | Initial MVP architecture document. |
 
 ---
@@ -88,9 +88,10 @@ live in `pnpm-workspace.yaml`. There is no `.npmrc` in this project.
 | `/opengraph-image` | Static    | Generated via `next/og`            |
 | `/icon`            | Static    | Generated favicon                  |
 
-Every page except the contact form is a Server Component. `ContactForm` is the
-only `'use client'` component in the project; it exists because form submission
-needs state and event handlers.
+Every page except the contact form is a Server Component. Only two
+`'use client'` components exist: `ContactForm`, because form submission needs
+state and event handlers, and `CopyrightYear`, because the footer year must
+reflect the visitor's local date rather than the build date.
 
 Navigation is driven by `nav` in `content/site.ts`, which is also what generates
 the sitemap — adding a route means adding one entry.

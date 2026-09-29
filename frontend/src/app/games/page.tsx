@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import { Container } from "@/components/Container";
-import { GameCard } from "@/components/GameCard";
-import { SectionHeading } from "@/components/SectionHeading";
+import { Container } from '@/components/Container';
+import { GameCard } from '@/components/GameCard';
+import { SectionHeading } from '@/components/SectionHeading';
 
-import { games } from "@/content/games";
+import { games } from '@/content/games';
 
 export const metadata: Metadata = {
-  title: "Games",
+  title: 'Games',
   description:
-    "TODO: one-sentence description of the Mythica Games project list for search results.",
-  alternates: { canonical: "/games" },
+    'TODO: one-sentence description of the Mythica Games project list for search results.',
+  alternates: { canonical: '/games' },
 };
 
 export default function GamesPage() {

@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import { Container } from "@/components/Container";
-import { ContactForm } from "@/components/ContactForm";
-import { ContactCards } from "@/components/LinkCard";
-import { SectionHeading } from "@/components/SectionHeading";
+import { Container } from '@/components/Container';
+import { ContactForm } from '@/components/ContactForm';
+import { ContactCards } from '@/components/LinkCard';
+import { SectionHeading } from '@/components/SectionHeading';
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: 'Contact',
   description:
-    "TODO: one-sentence description of how to reach the Mythica Games team for search results.",
-  alternates: { canonical: "/contact" },
+    'TODO: one-sentence description of how to reach the Mythica Games team for search results.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {

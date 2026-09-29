@@ -1,11 +1,11 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next';
 
-import { nav, siteUrl } from "@/content/site";
+import { nav, siteUrl } from '@/content/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return nav.map((item) => ({
     url: `${siteUrl}${item.href}`,
-    changeFrequency: "monthly",
-    priority: item.href === "/" ? 1 : 0.8,
+    changeFrequency: 'monthly',
+    priority: item.href === '/' ? 1 : 0.8,
   }));
 }

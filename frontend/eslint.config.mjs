@@ -1,8 +1,8 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextPlugin from "@next/eslint-plugin-next";
-import reactHooks from "eslint-plugin-react-hooks";
-import tseslint from "typescript-eslint";
-import globals from "globals";
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextPlugin from '@next/eslint-plugin-next';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from 'typescript-eslint';
+import globals from 'globals';
 
 /**
  * Custom ESLint 10 flat config.
@@ -16,18 +16,18 @@ import globals from "globals";
  */
 const eslintConfig = defineConfig([
   {
-    name: "next/core-web-vitals",
-    files: ["**/*.{js,jsx,mjs,ts,tsx,mts,cts}"],
-    ...nextPlugin.configs["core-web-vitals"],
+    name: 'next/core-web-vitals',
+    files: ['**/*.{js,jsx,mjs,ts,tsx,mts,cts}'],
+    ...nextPlugin.configs['core-web-vitals'],
   },
   {
-    name: "react-hooks/recommended",
-    files: ["**/*.{js,jsx,mjs,ts,tsx,mts,cts}"],
+    name: 'react-hooks/recommended',
+    files: ['**/*.{js,jsx,mjs,ts,tsx,mts,cts}'],
     ...reactHooks.configs.flat.recommended,
   },
   ...tseslint.configs.recommended,
   {
-    name: "globals/browser-node",
+    name: 'globals/browser-node',
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -36,11 +36,11 @@ const eslintConfig = defineConfig([
     },
   },
   globalIgnores([
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-    "node_modules/**",
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    'node_modules/**',
   ]),
 ]);
 

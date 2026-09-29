@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { nav, site } from "@/content/site";
+import { nav, site } from '@/content/site';
 
 export function SiteHeader() {
   return (

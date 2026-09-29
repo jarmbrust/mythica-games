@@ -1,4 +1,4 @@
-import type { Rules } from "@/content/rules";
+import type { Rules } from '@/content/rules';
 
 export function RulesProse({ rules }: { rules: Rules }) {
   return (
