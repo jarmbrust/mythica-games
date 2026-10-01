@@ -1,7 +1,13 @@
 export const site = {
   name: 'Mythica',
-  tagline: 'Guild and gaming community for World of Warcraft and other games.',
-  description: 'TODO: one-sentence description of Mythica Guild.',
+  tagline:
+    'Guild and gaming community for mature players (ie, old farts) in World of Warcraft.',
+  description:
+    'Mythica is a mature, social World of Warcraft guild, excited to return for WoW:Forever.',
+  legalNote: [
+    'World of Warcraft and its content are owned by Blizzard Entertainment, Inc.',
+    'This site is not affiliated with or endorsed by Blizzard Entertainment.',
+  ],
 } as const;
 
 export const siteUrl = (
@@ -15,7 +21,7 @@ export type NavItem = {
 
 export const nav: readonly NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Games', href: '/games' },
-  { label: 'Rules', href: '/rules' },
+  { label: 'Branches', href: '/branches' },
+  { label: 'Code of Conduct', href: '/rules' },
   { label: 'Contact', href: '/contact' },
 ];

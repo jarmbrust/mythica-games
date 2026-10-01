@@ -43,9 +43,10 @@ as authoritative, and do not deploy without replacing it.
 
 | Module           | Holds                                     |
 | ---------------- | ----------------------------------------- |
-| `site.ts`        | Name, tagline, description, `siteUrl`, nav |
-| `socials.ts`     | Social links, contact email, Discord invite |
-| `games.ts`       | Games with status badges and links        |
+| `site.ts`        | Name, tagline, description, `siteUrl`, nav, legal note |
+| `home.ts`        | Home page hero CTAs, about copy, closing CTA |
+| `socials.ts`     | Social links and Discord invite |
+| `branches.ts`    | Active and former guild branches          |
 | `rules.ts`       | Code of Conduct sections                  |
 
 Pages import from `content/` and never from raw strings, so copy changes are

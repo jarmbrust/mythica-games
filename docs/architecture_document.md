@@ -1,6 +1,6 @@
 # Mythica Games — Architecture Document
 
-- **Version:** 1.1 (MVP)
+- **Version:** 1.2 (MVP)
 - **Created:** 2026-09-26
 - **Last Updated:** 2026-09-27
 - **Status:** Active
@@ -9,6 +9,7 @@
 
 | Version | Date | Notes |
 | ------- | ---- | ----- |
+| 1.2 | 2026-09-27 | Navigation restructured: Games route replaced by Branches; Rules relabelled Code of Conduct; home page reworked around the guild description. Added `content/home.ts` and `content/branches.ts`; removed `content/games.ts`. |
 | 1.1 | 2026-09-27 | Contact form: per-IP rate limiting; subject restricted to a single line; validation responses never name the honeypot field. Footer year is client-rendered so it tracks the visitor's local date. |
 | 1.0 | 2026-09-26 | Initial MVP architecture document. |
 
@@ -28,7 +29,7 @@
 | Email delivery        | Resend 6.30.0                                      | Resend (Free tier, 3k/mo)  |
 | Form validation       | Zod 4.6.5                                          | —                          |
 | Icons                 | Heroicons 2.2.0                                    | —                          |
-| Custom domain         | `mythica.games`                                     | Registrar TBD              |
+| Custom domain         | `mythica.games`                                     | Registered              |
 | Version control       | Git                                                | GitHub                     |
 
 ### Version constraints
@@ -77,10 +78,10 @@ live in `pnpm-workspace.yaml`. There is no `.npmrc` in this project.
 ## 3. Routes
 
 | Route              | Rendering | Purpose                            |
-| ------------------ | --------- | ---------------------------------- |
-| `/`                | Static    | Home / About                       |
-| `/games`           | Static    | Games and projects index           |
-| `/rules`           | Static    | Community rules / Code of Conduct |
+| ------------------ | --------- | --------------------------------- |
+| `/`                | Static    | Home: landing page and guild description |
+| `/branches`        | Static    | Guild branches (Retail, Wow4ever; former: Classic, SoD) |
+| `/rules`           | Static    | Code of Conduct                   |
 | `/contact`         | Static    | Contact details and form           |
 | `/api/contact`     | Dynamic   | Contact form submission (POST)    |
 | `/sitemap.xml`     | Static    | Generated from `content/site.ts`   |
@@ -151,9 +152,10 @@ All site copy lives in typed modules under `frontend/src/content/`:
 
 | Module           | Contents                                       |
 | ---------------- | ---------------------------------------------- |
-| `site.ts`        | Name, tagline, description, `siteUrl`, nav list |
-| `socials.ts`     | Social links and the contact email address     |
-| `games.ts`       | Game/project entries with status and links     |
+| `site.ts`        | Name, tagline, description, `siteUrl`, nav list, legal note |
+| `home.ts`        | Home page hero CTAs, about copy, closing CTA    |
+| `socials.ts`     | Social links and the Discord invite     |
+| `branches.ts`    | Active and former guild branches               |
 | `rules.ts`       | Code of Conduct sections and last-updated date |
 
 **All values are currently placeholders.** Contact details use

@@ -1,13 +1,20 @@
-# Mythica Games
+# Mythica: A World of Warcraft guild and community.
 
-Website for the Mythica Games online gaming community — general information,
-games and projects, community rules, and contact.
+We are a group of older players from all walks of life, mostly located in the US and Canada. We run a casual, inclusive, and friendly guild.
+
+This site will contain general information about the guild, our branches, the code of conduct, and contact information.
+
+*Note: most of the guild's activity is on our discord, and a link to that will be available on the site.*
+
+## The Website
+
+This site was built and maintained by *"Zem"*, the current GM, and co-founder, of Mythica.
+The project was tackled as a fun exercise to hone a few talents, and to assist in recruitment for the upcoming "WoW Forever", classic+ version of the game.
 
 Built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4.
 Deployed to Vercel at [mythica.games](https://mythica.games).
 
-> **Status: pre-launch.** All site copy is placeholder. Contact addresses use
-> `example.com` and prose is marked `TODO:`. See [Content](#content) below.
+> **Status: pre-launch.** Most information is in the form of placeholders.
 
 ## Requirements
 
@@ -51,18 +58,20 @@ Run from the repository root.
 
 All site copy lives in typed modules under `frontend/src/content/`:
 
-| Module       | Holds                                              |
-| ------------ | -------------------------------------------------- |
-| `site.ts`    | Name, tagline, description, site URL, navigation   |
-| `socials.ts` | Social links, contact email, Discord invite        |
-| `games.ts`   | Games with status badges and links                 |
-| `rules.ts`   | Code of Conduct sections                           |
+| Module        | Holds                                              |
+| ------------- | -------------------------------------------------- |
+| `site.ts`     | Name, tagline, description, site URL, navigation, legal note |
+| `home.ts`     | Home page hero CTAs, about copy, closing CTA       |
+| `socials.ts`  | Social links and Discord invite                    |
+| `branches.ts` | Active and former guild branches                   |
+| `rules.ts`    | Code of Conduct sections                           |
 
 **Every value is a placeholder.** Replace them before launch:
 
 - `site.ts` — tagline, SEO description
-- `socials.ts` — the real contact email, Discord invite, and social URLs
-- `games.ts` — real game titles, summaries, and links
+- `home.ts` — hero, about, and closing call-to-action copy
+- `socials.ts` — the Discord invite and social URLs
+- `branches.ts` — real branch names and summaries
 - `rules.ts` — the actual Code of Conduct
 
 Pages and the generated sitemap both read from `content/site.ts`, so adding a

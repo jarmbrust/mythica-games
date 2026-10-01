@@ -48,6 +48,11 @@ export function SiteFooter() {
         <p className="mt-8 text-sm text-foreground-muted">
           &copy; <CopyrightYear /> {site.name}
         </p>
+        <div className="mt-2 space-y-1 text-xs text-foreground-muted">
+          {site.legalNote.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
       </div>
     </footer>
   );
