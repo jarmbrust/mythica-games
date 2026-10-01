@@ -17,8 +17,8 @@ export default function ContactPage() {
     <Container>
       <SectionHeading
         eyebrow="Contact"
-        title="Get in touch"
-        description="TODO: one or two sentences about what happens after someone reaches out, and what to expect."
+        title="Contact the officers"
+        description="TODO: one or two sentences about reaching the officers, what happens after someone reaches out, and what to expect."
       />
 
       <div className="mt-12 grid gap-12 lg:grid-cols-2">
@@ -36,7 +36,10 @@ export default function ContactPage() {
             Send a message
           </h2>
           <p className="mt-2 text-sm text-foreground-muted">
-            TODO: note on response time, and whether Discord is faster.
+            Discord is likely the quickest way to get your toons into the guild,
+            as is messaging an officer there. However, if you have any questions
+            and would rather messaging the officers and GM outside of Discord,
+            this works as well.
           </p>
           <div className="mt-4">
             <ContactForm />

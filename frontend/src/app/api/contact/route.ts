@@ -81,7 +81,7 @@ export async function POST(request: Request) {
         {
           ok: false,
           message:
-            'Contact form is not configured. Please email us directly instead.',
+            'Contact form is not configured. Please reach us on Discord instead.',
         },
         { status: 503 },
       );

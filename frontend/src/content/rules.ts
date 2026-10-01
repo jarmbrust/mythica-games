@@ -11,7 +11,7 @@ export type Rules = {
 };
 
 export const rules: Rules = {
-  title: 'Community Rules',
+  title: 'Code of Conduct',
   intro:
     'TODO: replace with a short introduction explaining why these rules exist and who enforces them.',
   lastUpdated: '2026-09-26',

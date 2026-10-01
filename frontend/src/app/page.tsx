@@ -1,15 +1,13 @@
 import Link from 'next/link';
 
+import { BoldMarkup } from '@/components/BoldMarkup';
 import { Container } from '@/components/Container';
-import { GameCard } from '@/components/GameCard';
 import { SectionHeading } from '@/components/SectionHeading';
-import { games } from '@/content/games';
+import { home } from '@/content/home';
 import { site } from '@/content/site';
 import { discordInvite } from '@/content/socials';
 
 export default function HomePage() {
-  const featured = games.filter((game) => game.status !== 'archived');
-
   return (
     <>
       <Container>
@@ -27,13 +25,13 @@ export default function HomePage() {
               target="_blank"
               className="rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
             >
-              Join the Discord
+              {home.heroPrimaryCta}
             </a>
             <Link
-              href="/games"
+              href="/branches"
               className="rounded-md border border-surface-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface-raised"
             >
-              Browse our games
+              {home.heroSecondaryCta}
             </Link>
           </div>
         </section>
@@ -41,34 +39,14 @@ export default function HomePage() {
 
       <Container>
         <section className="py-16">
-          <SectionHeading
-            eyebrow="About"
-            title="An online gaming community"
-            description="TODO: two or three sentences about who we are, what the community does, and what makes it worth joining."
-          />
-        </section>
-      </Container>
-
-      <Container>
-        <section className="py-16">
-          <SectionHeading
-            eyebrow="Games"
-            title="What we're building"
-            description="TODO: one sentence framing the current project lineup."
-          />
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {featured.map((game) => (
-              <GameCard key={game.slug} game={game} />
+          <SectionHeading eyebrow={home.aboutEyebrow} title={home.aboutTitle} />
+          <div className="mt-6 max-w-2xl space-y-4 text-base leading-relaxed text-foreground-muted">
+            {home.aboutParagraphs.map((paragraph) => (
+              <p key={paragraph}>
+                <BoldMarkup text={paragraph} />
+              </p>
             ))}
           </div>
-          <p className="mt-8">
-            <Link
-              href="/games"
-              className="text-sm font-medium text-accent transition-colors hover:text-accent-hover"
-            >
-              See all games →
-            </Link>
-          </p>
         </section>
       </Container>
 
@@ -76,11 +54,10 @@ export default function HomePage() {
         <section className="py-16">
           <div className="rounded-lg border border-surface-border bg-surface-raised p-8 text-center">
             <h2 className="text-2xl font-bold tracking-tight text-foreground">
-              TODO: closing call to action
+              {home.closingTitle}
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-foreground-muted">
-              TODO: one or two sentences inviting the reader to get involved,
-              then a link to the contact page and the rules.
+              {home.closingBody}
             </p>
           </div>
         </section>
