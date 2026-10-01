@@ -9,7 +9,7 @@
 
 | Version | Date | Notes |
 | ------- | ---- | ----- |
-| 1.2 | 2026-09-27 | Navigation restructured: Games route replaced by Branches; Rules relabelled Code of Conduct; home page reworked around the guild description. Added `content/home.ts` and `content/branches.ts`; removed `content/games.ts`. |
+| 1.2 | 2026-09-27 | Navigation restructured: Games route replaced by Branches; Rules relabelled Code of Conduct; home page reworked around the guild description. Added `content/home.ts` and `content/branches.ts`; removed `content/games.ts`. Cinzel display font for headings; fixed background image layer. |
 | 1.1 | 2026-09-27 | Contact form: per-IP rate limiting; subject restricted to a single line; validation responses never name the honeypot field. Footer year is client-rendered so it tracks the visitor's local date. |
 | 1.0 | 2026-09-26 | Initial MVP architecture document. |
 
@@ -152,7 +152,7 @@ All site copy lives in typed modules under `frontend/src/content/`:
 
 | Module           | Contents                                       |
 | ---------------- | ---------------------------------------------- |
-| `site.ts`        | Name, tagline, description, `siteUrl`, nav list, legal note |
+| `site.ts`        | Name, tagline, description, `siteUrl`, nav list, legal note, background image |
 | `home.ts`        | Home page hero CTAs, about copy, closing CTA    |
 | `socials.ts`     | Social links and the Discord invite     |
 | `branches.ts`    | Active and former guild branches               |
@@ -195,6 +195,16 @@ MX and TXT records are never proxied. If a record appears greyed-out as
 and no `prefers-color-scheme` branch, so there is no hydration risk and no
 flash of the wrong theme. Adding a light theme later means promoting these values
 to switchable custom properties.
+
+**Display font.** Headings use Cinzel (Google Fonts via `next/font/google`),
+wired as `--font-display` in `@theme`, with a fallback stack of `ui-serif`,
+Georgia. Body copy stays Inter.
+
+**Background.** A fixed full-viewport image layer
+(`components/BackgroundImage.tsx`) sits behind the scrolling content, dimmed by
+a surface-coloured overlay for legibility. The image lives in
+`frontend/public/backgrounds/` and the active path is `site.backgroundImage` in
+`content/site.ts`.
 
 **Metadata.** `metadata` is exported from the root layout with a
 `title.template` of `%s | Mythica Games`; each sub-route exports its own title,

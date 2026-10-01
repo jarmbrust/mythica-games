@@ -60,7 +60,7 @@ All site copy lives in typed modules under `frontend/src/content/`:
 
 | Module        | Holds                                              |
 | ------------- | -------------------------------------------------- |
-| `site.ts`     | Name, tagline, description, site URL, navigation, legal note |
+| `site.ts`     | Name, tagline, description, site URL, navigation, legal note, background image |
 | `home.ts`     | Home page hero CTAs, about copy, closing CTA       |
 | `socials.ts`  | Social links and Discord invite                    |
 | `branches.ts` | Active and former guild branches                   |

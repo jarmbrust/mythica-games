@@ -43,7 +43,7 @@ as authoritative, and do not deploy without replacing it.
 
 | Module           | Holds                                     |
 | ---------------- | ----------------------------------------- |
-| `site.ts`        | Name, tagline, description, `siteUrl`, nav, legal note |
+| `site.ts`        | Name, tagline, description, `siteUrl`, nav, legal note, background image |
 | `home.ts`        | Home page hero CTAs, about copy, closing CTA |
 | `socials.ts`     | Social links and Discord invite |
 | `branches.ts`    | Active and former guild branches          |
