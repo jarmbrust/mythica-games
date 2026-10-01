@@ -11,10 +11,14 @@
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono-code), ui-monospace, monospace;
+  --font-sans: var(--font-cinzel), ui-serif, Georgia, serif;
+  --font-mono: var(--font-mono-code), ui-monospace, monospace;
+  --font-display: var(--font-cinzel), ui-serif, Georgia, serif;
 }
 
 html {
   color-scheme: dark;
+  font-size: 18px; /* site-wide base — all rem-based Tailwind sizes scale from here */
 }
 
 body {
@@ -22,6 +26,12 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
 }
 
 :focus-visible {

@@ -8,7 +8,7 @@ export function SiteHeader() {
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight text-foreground"
+          className="font-display text-lg font-bold tracking-tight text-foreground"
         >
           {site.name}
         </Link>

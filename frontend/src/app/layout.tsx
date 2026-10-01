@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Cinzel, Inter, JetBrains_Mono } from 'next/font/google';
 
+import { BackgroundImage } from '@/components/BackgroundImage';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { site, siteUrl } from '@/content/site';
@@ -16,6 +17,12 @@ const inter = Inter({
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono-code',
+  display: 'swap',
+});
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  variable: '--font-cinzel',
   display: 'swap',
 });
 
@@ -47,8 +54,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrainsMono.variable} ${cinzel.variable}`}
+    >
       <body className="min-h-dvh">
+        <BackgroundImage />
         <SiteHeader />
         <main className="py-16">{children}</main>
         <SiteFooter />

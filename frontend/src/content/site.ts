@@ -4,6 +4,9 @@ export const site = {
     'Guild and gaming community for mature players (ie, old farts) in World of Warcraft.',
   description:
     'Mythica is a mature, social World of Warcraft guild, excited to return for WoW:Forever.',
+  // Fixed background layer. Drop images in `frontend/public/backgrounds/`
+  // and point this path at whichever one should be shown.
+  backgroundImage: '/backgrounds/wow-background8.jpeg',
   legalNote: [
     'World of Warcraft and its content are owned by Blizzard Entertainment, Inc.',
     'This site is not affiliated with or endorsed by Blizzard Entertainment.',
