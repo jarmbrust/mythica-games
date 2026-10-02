@@ -2,7 +2,7 @@
 
 We are a group of older players from all walks of life, mostly located in the US and Canada. We run a casual, inclusive, and friendly guild.
 
-This site will contain general information about the guild, our branches, the code of conduct, and contact information.
+This site will contain general information about the guild, our community, the code of conduct, and contact information.
 
 *Note: most of the guild's activity is on our discord, and a link to that will be available on the site.*
 
@@ -63,7 +63,7 @@ All site copy lives in typed modules under `frontend/src/content/`:
 | `site.ts`     | Name, tagline, description, site URL, navigation, legal note, background image |
 | `home.ts`     | Home page hero CTAs, about copy, closing CTA       |
 | `socials.ts`  | Social links and Discord invite                    |
-| `branches.ts` | Active and former guild branches                   |
+| `community.ts`| Community hub sections and entries                 |
 | `rules.ts`    | Code of Conduct sections                           |
 
 **Every value is a placeholder.** Replace them before launch:
@@ -71,7 +71,7 @@ All site copy lives in typed modules under `frontend/src/content/`:
 - `site.ts` — tagline, SEO description
 - `home.ts` — hero, about, and closing call-to-action copy
 - `socials.ts` — the Discord invite and social URLs
-- `branches.ts` — real branch names and summaries
+- `community.ts` — real section and entry copy
 - `rules.ts` — the actual Code of Conduct
 
 Pages and the generated sitemap both read from `content/site.ts`, so adding a

@@ -46,7 +46,7 @@ as authoritative, and do not deploy without replacing it.
 | `site.ts`        | Name, tagline, description, `siteUrl`, nav, legal note, background image |
 | `home.ts`        | Home page hero CTAs, about copy, closing CTA |
 | `socials.ts`     | Social links and Discord invite |
-| `branches.ts`    | Active and former guild branches          |
+| `community.ts`   | Community hub sections and entries        |
 | `rules.ts`       | Code of Conduct sections                  |
 
 Pages import from `content/` and never from raw strings, so copy changes are

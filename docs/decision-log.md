@@ -1,8 +1,8 @@
 # Decision Log
 
 - **Created:** 2026-09-26
-- **Last Updated:** 2026-09-27
-- **Related:** `docs/architecture_document.md` (v1.1)
+- **Last Updated:** 2026-10-02
+- **Related:** `docs/architecture_document.md` (v1.3)
 
 A record of decisions considered, the alternatives, and what would change them.
 Conclusions only — this file is safe to keep in a public repository.

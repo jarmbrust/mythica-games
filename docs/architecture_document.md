@@ -1,14 +1,15 @@
 # Mythica Games — Architecture Document
 
-- **Version:** 1.2 (MVP)
+- **Version:** 1.3 (MVP)
 - **Created:** 2026-09-26
-- **Last Updated:** 2026-09-27
+- **Last Updated:** 2026-10-02
 - **Status:** Active
 
 ## Revision History
 
 | Version | Date | Notes |
 | ------- | ---- | ----- |
+| 1.3 | 2026-10-02 | Branches route renamed to Community and restructured as a sectioned community hub (WoW branches, Dungeons & Dragons, other games); `content/branches.ts` replaced by `content/community.ts`. |
 | 1.2 | 2026-09-27 | Navigation restructured: Games route replaced by Branches; Rules relabelled Code of Conduct; home page reworked around the guild description. Added `content/home.ts` and `content/branches.ts`; removed `content/games.ts`. Cinzel display font for headings; fixed background image layer. |
 | 1.1 | 2026-09-27 | Contact form: per-IP rate limiting; subject restricted to a single line; validation responses never name the honeypot field. Footer year is client-rendered so it tracks the visitor's local date. |
 | 1.0 | 2026-09-26 | Initial MVP architecture document. |
@@ -80,7 +81,7 @@ live in `pnpm-workspace.yaml`. There is no `.npmrc` in this project.
 | Route              | Rendering | Purpose                            |
 | ------------------ | --------- | --------------------------------- |
 | `/`                | Static    | Home: landing page and guild description |
-| `/branches`        | Static    | Guild branches (Retail, Wow4ever; former: Classic, SoD) |
+| `/community`       | Static    | Community hub (WoW branches, D&D, other games) |
 | `/rules`           | Static    | Code of Conduct                   |
 | `/contact`         | Static    | Contact details and form           |
 | `/api/contact`     | Dynamic   | Contact form submission (POST)    |
@@ -155,7 +156,7 @@ All site copy lives in typed modules under `frontend/src/content/`:
 | `site.ts`        | Name, tagline, description, `siteUrl`, nav list, legal note, background image |
 | `home.ts`        | Home page hero CTAs, about copy, closing CTA    |
 | `socials.ts`     | Social links and the Discord invite     |
-| `branches.ts`    | Active and former guild branches               |
+| `community.ts`   | Community hub sections and entries             |
 | `rules.ts`       | Code of Conduct sections and last-updated date |
 
 **All values are currently placeholders.** Contact details use

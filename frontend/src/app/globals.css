@@ -9,8 +9,6 @@
   --color-accent: #7c5cff;
   --color-accent-hover: #9378ff;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-mono-code), ui-monospace, monospace;
   --font-sans: var(--font-cinzel), ui-serif, Georgia, serif;
   --font-mono: var(--font-mono-code), ui-monospace, monospace;
   --font-display: var(--font-cinzel), ui-serif, Georgia, serif;
@@ -25,13 +23,18 @@ body {
   background-color: var(--color-surface);
   color: var(--color-foreground);
   font-family: var(--font-sans);
+  /* Cinzel renders thin at 400; 500 keeps body copy darker while font-bold
+     (700) and <strong> stay clearly distinct. Tune between 400–600. */
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-display);
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
 }
 
 :focus-visible {

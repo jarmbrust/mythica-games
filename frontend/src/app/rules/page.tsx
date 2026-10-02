@@ -7,7 +7,7 @@ import { rules } from '@/content/rules';
 export const metadata: Metadata = {
   title: rules.title,
   description:
-    'If you have any questions regarding the Code of Conduct, please ask!',
+    "If you have any questions regarding Mythica's Code of Conduct, please ask!",
   alternates: { canonical: '/rules' },
 };
 

@@ -11,11 +11,12 @@ See the [root README](../README.md) for setup, commands, and deployment, and
 Run from the repository root so the workspace lockfile is used:
 
 ```bash
-pnpm dev
 pnpm build
 pnpm typecheck
 pnpm lint
 pnpm format
+pnpm test
+pnpm dev
 ```
 
 Running them from this directory works too, but install from the root.

@@ -1,8 +1,8 @@
 export const site = {
   name: 'Mythica',
-  tagline: 'A Casual World of Warcraft Guild for Slightly Older Players',
+  tagline: 'A social guild for friendly, fun, and (more or less) mature gamers',
   description:
-    'Mythica is a social World of Warcraft guild with adults of various levels of maturity. We are excited looking forward to WoW:Forever!',
+    'Mythica is a friendly, casual, adult social gaming community focused mostly on World of Warcraft. We have an active Retail branch, and are excitedly looking forward to WoW:Forever!',
   // Fixed background layer. Drop images in `frontend/public/backgrounds/`
   // and point this path at whichever one should be shown.
   backgroundImage: '/backgrounds/wow-background8.jpeg',
@@ -23,7 +23,7 @@ export type NavItem = {
 
 export const nav: readonly NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Branches', href: '/branches' },
+  { label: 'Community', href: '/community' },
   { label: 'Code of Conduct', href: '/rules' },
   { label: 'Contact', href: '/contact' },
 ];

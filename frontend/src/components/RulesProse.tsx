@@ -1,6 +1,6 @@
 import type { Rules } from '@/content/rules';
 
-import { BoldMarkup } from '@/components/BoldMarkup';
+import { InlineMarkup } from '@/components/InlineMarkup';
 
 export function RulesProse({ rules }: { rules: Rules }) {
   return (
@@ -18,7 +18,7 @@ export function RulesProse({ rules }: { rules: Rules }) {
             <dd className="mt-2 space-y-4 text-base leading-relaxed text-foreground-muted">
               {section.body.map((paragraph) => (
                 <p key={paragraph}>
-                  <BoldMarkup text={paragraph} />
+                  <InlineMarkup text={paragraph} />
                 </p>
               ))}
             </dd>

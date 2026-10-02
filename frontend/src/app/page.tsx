@@ -1,7 +1,7 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 
-import { BoldMarkup } from '@/components/BoldMarkup';
 import { Container } from '@/components/Container';
+import { InlineMarkup } from '@/components/InlineMarkup';
 import { SectionHeading } from '@/components/SectionHeading';
 import { home } from '@/content/home';
 import { site } from '@/content/site';
@@ -27,12 +27,12 @@ export default function HomePage() {
             >
               {home.heroPrimaryCta}
             </a>
-            {/*<Link
-              href="/branches"
+            <Link
+              href="/community"
               className="rounded-md border border-surface-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface-raised"
             >
               {home.heroSecondaryCta}
-            </Link>*/}
+            </Link>
           </div>
         </section>
       </Container>
@@ -43,14 +43,14 @@ export default function HomePage() {
           <div className="mt-6 max-w-2xl space-y-4 text-base leading-relaxed text-foreground-muted">
             {home.aboutParagraphs.map((paragraph) => (
               <p key={paragraph}>
-                <BoldMarkup text={paragraph} />
+                <InlineMarkup text={paragraph} />
               </p>
             ))}
           </div>
         </section>
       </Container>
 
-      <Container>
+      {/*<Container>
         <section className="py-16">
           <div className="rounded-lg border border-surface-border bg-surface-raised p-8 text-center">
             <h2 className="text-2xl font-bold tracking-tight text-foreground">
@@ -61,7 +61,7 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-      </Container>
+      </Container>*/}
     </>
   );
 }
