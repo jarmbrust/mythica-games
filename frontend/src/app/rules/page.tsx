@@ -7,7 +7,7 @@ import { rules } from '@/content/rules';
 export const metadata: Metadata = {
   title: rules.title,
   description:
-    'TODO: one-sentence description of the Mythica Games code of conduct for search results.',
+    'If you have any questions regarding the Code of Conduct, please ask!',
   alternates: { canonical: '/rules' },
 };
 

@@ -6,8 +6,7 @@ import { branches, type Branch } from '@/content/branches';
 
 export const metadata: Metadata = {
   title: 'Branches',
-  description:
-    'TODO: one-sentence description of the Mythica Guild branches for search results.',
+  description: 'Mythica on different versions of wow.',
   alternates: { canonical: '/branches' },
 };
 
@@ -43,7 +42,9 @@ export default function BranchesPage() {
       <h2 className="mt-12 text-lg font-semibold text-foreground">
         {branches.formerHeading}
       </h2>
-      <p className="mt-2 text-sm text-foreground-muted">{branches.formerIntro}</p>
+      {/*<p className="mt-2 text-sm text-foreground-muted">
+        {branches.formerIntro}
+      </p>*/}
       <div className="mt-4 grid gap-6 sm:grid-cols-2">
         {branches.former.map((branch) => (
           <BranchCard key={branch.slug} branch={branch} />

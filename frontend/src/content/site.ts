@@ -1,9 +1,8 @@
 export const site = {
   name: 'Mythica',
-  tagline:
-    'Guild and gaming community for mature players (ie, old farts) in World of Warcraft.',
+  tagline: 'A Casual World of Warcraft Guild for Slightly Older Players',
   description:
-    'Mythica is a mature, social World of Warcraft guild, excited to return for WoW:Forever.',
+    'Mythica is a social World of Warcraft guild with adults of various levels of maturity. We are excited looking forward to WoW:Forever!',
   // Fixed background layer. Drop images in `frontend/public/backgrounds/`
   // and point this path at whichever one should be shown.
   backgroundImage: '/backgrounds/wow-background8.jpeg',

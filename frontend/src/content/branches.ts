@@ -10,7 +10,7 @@ export type Branches = {
   intro: string;
   activeHeading: string;
   formerHeading: string;
-  formerIntro: string;
+  // formerIntro: string;
   active: readonly Branch[];
   former: readonly Branch[];
 };
@@ -19,11 +19,11 @@ export const branches: Branches = {
   eyebrow: 'Branches',
   title: 'Our branches',
   intro:
-    'TODO: one or two sentences introducing the branches and how newcomers choose one.',
+    'We have been in three different versions of WoW, and will be setting up shop in a forth soon!',
   activeHeading: 'Active branches',
   formerHeading: 'Former branches',
-  formerIntro:
-    'TODO: one sentence acknowledging the retired branches and thanking their members.',
+  // formerIntro:
+  //   'TODO: one sentence acknowledging the retired branches and thanking their members.',
   active: [
     {
       slug: 'retail',
@@ -32,22 +32,22 @@ export const branches: Branches = {
         'TODO: describe the Retail branch — what it raids, when it runs, and who it suits.',
     },
     {
-      slug: 'wow4ever',
-      name: 'Wow4ever',
-      summary:
-        'TODO: describe the Wow4ever branch — the server, its activities, and who it suits.',
+      slug: 'wowforever',
+      name: 'WoW:Forever',
+      summary: 'We will be setting up shop horde-side, on the RP instance.',
     },
   ],
   former: [
     {
       slug: 'classic',
       name: 'Classic',
-      summary: 'TODO: describe the retired Classic branch and when it wound down.',
+      summary:
+        'The guild actually started here to escape Shadowlands, but it died out when DF picked up.',
     },
     {
       slug: 'sod',
       name: 'Season of Discovery',
-      summary: 'TODO: describe the retired SoD branch and when it wound down.',
+      summary: 'SoD was never meant to last.',
     },
   ],
 };

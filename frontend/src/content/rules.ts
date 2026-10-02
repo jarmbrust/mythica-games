@@ -28,7 +28,7 @@ export const rules: Rules = {
       heading:
         'Rule 2: We continuously strive to foster an accepting and safe environment',
       body: [
-        'We are LGBTQ+ friendly, inclusive, and under no circumstances do we tolerate hate-speech of any kind. Anyone in guild found harassing other players with hate-speech (speech that is: racist, sexist, homophobic, xenophobic, and other related slurs), whether their target is in guild or not, **might** get one warning before a swift /gkick... and you may not get even one warning if you were egregious enough.',
+        'We are LGBTQ+ friendly, inclusive, and under no circumstances do we tolerate hate-speech of any kind. Anyone in guild found harassing other players with hate-speech (speech that is: racist, sexist, homophobic, xenophobic, and other related slurs), whether their target is in guild or not, **might** get one warning before a swift /gkick... and you may not get even one warning if you were egregious enough. ',
         "We do not have a lot of tolerance for this because, well, it's a freaking computer game folks, we are here to hang out and have fun. And yes, we are well aware that there is plenty of fantasy racism and xenophobia in game, and this is fine as it is part of that fantasy world... it only becomes a problem when it is used in an attempt to obscure obviously real-world bigotry. If you lack the maturity or empathy to treat everyone with the same basic decency, they you're probably better off in some toxic streamer's zerg-guild, because we sure as hell don\'t want you.",
       ],
     },
@@ -52,7 +52,7 @@ export const rules: Rules = {
     },
     {
       heading: 'Rule 6: Be excellent to one another',
-      body: ['...and party on dude!'],
+      body: ['**...and party on dude!**'],
     },
   ],
 };

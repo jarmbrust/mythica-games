@@ -7,8 +7,7 @@ import { SectionHeading } from '@/components/SectionHeading';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description:
-    'TODO: one-sentence description of how to reach the Mythica Games team for search results.',
+  description: 'Ways to contact the officers.',
   alternates: { canonical: '/contact' },
 };
 
@@ -18,7 +17,8 @@ export default function ContactPage() {
       <SectionHeading
         eyebrow="Contact"
         title="Contact the officers"
-        description="TODO: one or two sentences about reaching the officers, what happens after someone reaches out, and what to expect."
+        description="Discord is the quickest way to get your toons into the guild, just call out when you land on the server that you need an invite.
+        You can also send a messing on this site too, it is a great place to ask questions!"
       />
 
       <div className="mt-12 grid gap-12 lg:grid-cols-2">
@@ -36,10 +36,8 @@ export default function ContactPage() {
             Send a message
           </h2>
           <p className="mt-2 text-sm text-foreground-muted">
-            Discord is likely the quickest way to get your toons into the guild,
-            as is messaging an officer there. However, if you have any questions
-            and would rather messaging the officers and GM outside of Discord,
-            this works as well.
+            You won't be able to see most of the channels until you are given
+            the basic permissions by an officer.
           </p>
           <div className="mt-4">
             <ContactForm />

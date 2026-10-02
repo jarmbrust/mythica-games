@@ -1,5 +1,7 @@
 import type { Rules } from '@/content/rules';
 
+import { BoldMarkup } from '@/components/BoldMarkup';
+
 export function RulesProse({ rules }: { rules: Rules }) {
   return (
     <div className="max-w-3xl">
@@ -13,8 +15,12 @@ export function RulesProse({ rules }: { rules: Rules }) {
             <dt className="text-lg font-semibold text-foreground">
               {section.heading}
             </dt>
-            <dd className="mt-2 text-base leading-relaxed text-foreground-muted">
-              {section.body}
+            <dd className="mt-2 space-y-4 text-base leading-relaxed text-foreground-muted">
+              {section.body.map((paragraph) => (
+                <p key={paragraph}>
+                  <BoldMarkup text={paragraph} />
+                </p>
+              ))}
             </dd>
           </div>
         ))}

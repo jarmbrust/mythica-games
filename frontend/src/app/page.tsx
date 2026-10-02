@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 import { BoldMarkup } from '@/components/BoldMarkup';
 import { Container } from '@/components/Container';
@@ -27,12 +27,12 @@ export default function HomePage() {
             >
               {home.heroPrimaryCta}
             </a>
-            <Link
+            {/*<Link
               href="/branches"
               className="rounded-md border border-surface-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface-raised"
             >
               {home.heroSecondaryCta}
-            </Link>
+            </Link>*/}
           </div>
         </section>
       </Container>
