@@ -51,8 +51,12 @@ export const rules: Rules = {
       ],
     },
     {
-      heading: 'Rule 6: Be excellent to one another',
-      body: ['**...and party on dude!**'],
+      heading: 'Rule 6: No Elitism',
+      body: [
+        'Many of us have played this game for years, some as early as 2004/2005, and have raided on many levels. However, with age (sometimes) comes wisdom, and a lot of real-life commitments and interests, and not caring quite as much about the pixels our toons wear. ',
+        "Don't get me wrong, when we group for instances, raids, and so on, we pay attention and perform our roles to the best of our abilities, however, we are not doing it for the pixels, and not doing it for the bragging-rights, we are doing it to have fun with friends.",
+        "Also, it is important to keep in mind that not everyone has played this game for 20+ years, and not everyone is (or wants to be) a 'leet-player. Therefore, we do not berate or chastise people for unintentionally missing some mechanic or another in a run, we help them improve over time.",
+      ],
     },
   ],
 };
