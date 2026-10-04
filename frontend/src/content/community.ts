@@ -76,14 +76,15 @@ export const community: Community = {
     },
     {
       slug: 'tabletop',
-      heading: 'Dungeons & Dragons',
+      heading: 'Dungeons & Dragons and other TTRPGs',
       intro:
-        'We currently have a D&D game that is ongoing (VTT/Discord). At this moment it is full, unless the DM decides to make it a West Marches-style game (which he might). Regardless, a few people have mentioned starting up campaigns or one-shots in the future.',
+        'We currently have a D&D game that is ongoing (VTT/Discord), and a few guildies have mentioned interest in starting up campaigns or one-shots in the future.',
       entries: [
         {
           slug: 'dnd-campaign',
           name: 'Keep on the Boarderlands',
-          summary: 'D&D 5.5e, VTT/Discord',
+          summary:
+            'D&D 5.5e, VTT/Discord. Just started but currently FULL, unless the DM decides to make it West Marches-style (which he is considering).',
         },
       ],
     },
