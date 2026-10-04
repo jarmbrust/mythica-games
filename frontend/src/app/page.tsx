@@ -49,19 +49,6 @@ export default function HomePage() {
           </div>
         </section>
       </Container>
-
-      {/*<Container>
-        <section className="py-16">
-          <div className="rounded-lg border border-surface-border bg-surface-raised p-8 text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-foreground">
-              {home.closingTitle}
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-foreground-muted">
-              {home.closingBody}
-            </p>
-          </div>
-        </section>
-      </Container>*/}
     </>
   );
 }
