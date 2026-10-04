@@ -30,8 +30,7 @@ export const statusLabels: Record<CommunityEntryStatus, string> = {
 export const community: Community = {
   eyebrow: 'Community',
   title: 'The Mythica Community',
-  intro:
-    'TODO: one or two sentences about everything the community does together — WoW branches, tabletop games, and other places we play.',
+  intro: '',
   sections: [
     {
       slug: 'wow-branches',
@@ -44,21 +43,21 @@ export const community: Community = {
           name: 'Retail',
           status: 'active',
           summary:
-            'TODO: describe the Retail branch — what it raids, when it runs, and who it suits.',
+            'Our Retail branch has been around since the beginning of the Dragonflight expansion, and has earned AOTC most seasons. While it is still fairly active, many regular players are taking a bit of a break and looking forward to WoW:Forever.',
         },
         {
           slug: 'wowforever',
           name: 'WoW:Forever',
           status: 'upcoming',
-          summary: 'We will be setting up shop horde-side, on the RP instance.',
+          summary:
+            'We will be setting up shop horde-side, on the RP instance, and plan to mostly take our time leveling, questing, crafting, and so on. We plan to have guild groups for instances, events, and so on, but do not know yet if we will be raiding in end-game.',
         },
       ],
     },
     {
       slug: 'former-branches',
       heading: 'Former branches',
-      intro:
-        'TODO: one sentence acknowledging the retired branches and thanking their members.',
+      intro: '',
       entries: [
         {
           slug: 'classic',
@@ -71,31 +70,32 @@ export const community: Community = {
           slug: 'sod',
           name: 'Season of Discovery',
           status: 'former',
-          summary: 'SoD was never meant to last.',
+          summary: 'SoD was never meant to last...',
         },
       ],
     },
     {
       slug: 'tabletop',
       heading: 'Dungeons & Dragons',
-      intro: 'TODO: describe the tabletop side of the community.',
+      intro:
+        'We currently have a D&D game that is ongoing (VTT/Discord). At this moment it is full, unless the DM decides to make it a West Marches-style game (which he might). Regardless, a few people have mentioned starting up campaigns or one-shots in the future.',
       entries: [
         {
           slug: 'dnd-campaign',
-          name: 'TODO: campaign name',
-          summary: 'TODO: describe the campaign and how to join.',
+          name: 'Keep on the Boarderlands',
+          summary: 'D&D 5.5e, VTT/Discord',
         },
       ],
     },
     {
       slug: 'other-games',
       heading: 'Other games',
-      intro: 'TODO: describe the other games the community plays together.',
+      intro: 'A lot of us play other games as well, Steam games, and so on.',
       entries: [
         {
           slug: 'other-game-one',
-          name: 'TODO: game name',
-          summary: 'TODO: describe it.',
+          name: 'Other games',
+          summary: 'TBD',
         },
       ],
     },
