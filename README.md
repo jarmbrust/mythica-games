@@ -139,8 +139,8 @@ exist yet and nothing depends on it.
 ## Documentation
 
 - [`docs/architecture_document.md`](docs/architecture_document.md) — what the
-  system is and how it is wired
+  system is and how it is wired.
 - [`docs/decision-log.md`](docs/decision-log.md) — why each choice was made, and
-  what would change it
+  what would change it.
 - [`AGENTS.md`](AGENTS.md) — commands, conventions, and the gotchas most likely
-  to cause damage
+  to cause damage.
