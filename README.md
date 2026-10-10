@@ -8,7 +8,7 @@ This site will contain general information about the guild, our community, the c
 
 ## The Website
 
-This site was built and maintained by *"Zem"*, the current GM, and co-founder, of Mythica.
+This site was built and maintained by *"Zem"*, the current GM and co-founder, of Mythica.
 The project was tackled as a fun exercise to hone a few talents, and to assist in recruitment for the upcoming "WoW Forever", classic+ version of the game.
 
 Built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4.
