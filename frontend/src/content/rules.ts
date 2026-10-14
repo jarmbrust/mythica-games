@@ -53,8 +53,8 @@ export const rules: Rules = {
     {
       heading: 'Rule 6: No Elitism',
       body: [
-        'Many of us have played this game for years, some as early as 2004/2005, and have raided on many levels. However, with age (sometimes) comes wisdom, and a lot of real-life commitments and interests, and not caring quite as much about the pixels our toons wear. ',
-        "Don't get me wrong, when we group for instances, raids, and so on, we pay attention and perform our roles to the best of our abilities, however, we are not doing it for the pixels, and not doing it for the bragging-rights, we are doing it to have fun with friends.",
+        "Many of us have played this game for years, some as early as 2004/2005, and have raided on many levels. However, these days a lot of us have real-life commitments and offline interests. We're probably not spending 20, 30, 40 hours a week in game getting phatl00tz.",
+        "Don't get me wrong, some members do play long hours, and we try our best in instances, raids, and so on, however, we're here for a fun and relaxing time, not being bleeding-edge on anything in game. We also love to help new or returning players learn and enjoy the game!",
       ],
     },
   ],
