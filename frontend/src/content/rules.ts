@@ -26,22 +26,22 @@ export const rules: Rules = {
       heading:
         'Rule 2: We continuously strive to foster an accepting and safe environment',
       body: [
-        'We are a LGBTQ+ friendly and all-around inclusive community. Under no circumstances do we tolerate hate-speech of any kind. Anyone in guild found harassing or trolling other players with racist, sexist, homophobic, xenophobic, and other related subjects or slurs, open themselves up to a swift /gkick.',
-        'Note: while fantasy-racism and xenophobia exist in the game and game-lore, when it’s used as a thin veil over obviously real-world bigotry, then it becomes a problem.',
+        'We are a LGBTQ+ friendly and an all-around inclusive community. Under no circumstances do we tolerate hate-speech of any kind. Anyone in guild found harassing or trolling other players with racist, sexist, homophobic, xenophobic, and other related topics or slurs open themselves up to a swift /gkick.',
+        'Note: while fantasy-racism and xenophobia exist in the game-lore, when it’s used as a thin veil over obvious real-world bigotry, then it becomes a problem.',
       ],
     },
     {
       heading: 'Rule 3: Stay clear of hot-button topics',
       body: [
-        'This one is mostly for our discord and guild chat (although in some cases it can certain apply to more general chat channels), but try to avoid heated topics which easily stir up arguments and shouting-matches. Topics like religion, politics, and so on tend to stir-up turmoil and anger, not legitimate discussion or debate (welcome to the internet).',
-        'We live in a society with political turmoil and the siloed propaganda, fulled by random influncers and corporate media talking-heads of all sorts. While many might love to chat endlessly about such things in guild, many others generally want to leave behind the news and chaos for at least a little awhile.',
+        'Avoid heated topics that easily stir up arguments and shouting-matches. Topics like religion, politics, and so on tend to foment outrage, not encourage legitimate discussion or debate (welcome to the internet btw).',
+        "We live in a time and society where political views are wildly divergent, often ill-informed, and in everyone's face. You may have pure intentions beginning that political discussion, but in public channels it will likely devolve quickly into trolling and name-calling, and a lot of people login to play a fantasy game, not discuss real-world issues.",
       ],
     },
     {
       heading: "Rule 4: Don't be vulgar",
       body: [
-        "We are all adults here, but this doesn't mean we want to deal with crap that's intentionally crude, obnoxious, offensive, gross, or gruesome.",
-        'Therefor, in Discord and guild chats we like to keep things overall civil. In many cases this also applies on server/instance/pvp channels and forums as well. When in doubt, aim for around what most would regard as PG-13(ish). While the occasional f-bomb totally fine, objectionable or offensive content in not allowed, for example: porn/nudes, explicit depictions or descriptions of violence, child or animal abuse, excessive bad language, and so on.',
+        "We are all adults here, but this doesn't mean we want to deal with content that's intentionally crude, obnoxious, offensive, gross, or gruesome.",
+        'Therefor, in Discord, guild chats, public chats, forums, and so on, we like to keep things overall civil. As far as the guild text and voice chats, when in doubt, aim for what most regard as PG-13(ish) content in public chats and forums.',
       ],
     },
     {
