@@ -19,5 +19,5 @@ export const officerDiscordCard: DiscordCard = {
   label:
     'You can message any of the following officers for additional information about the guild, or to request an invite.',
   href: 'https://discord.com/app',
-  ids: ['Zem3k', 'More IDs coming soon'],
+  ids: ['Zem3k', '(adding more soon)'],
 };
