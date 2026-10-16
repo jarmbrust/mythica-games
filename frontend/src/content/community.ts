@@ -50,7 +50,7 @@ export const community: Community = {
           name: 'WoW:Forever',
           status: 'upcoming',
           summary:
-            'We will be setting up shop horde-side, on the RP instance, and plan to mostly take our time leveling, questing, crafting, and so on. We plan to have guild groups for instances, events, and so on, but do not know yet if we will be raiding in end-game.',
+            "We're setting up shop horde-side on the RP instance, and while we plan to mostly take our time leveling, questing, crafting, we will run guild groups for instances, events, and so on. Raiding is an open question, and will depend on how many want to do it come 60.",
         },
       ],
     },
@@ -75,28 +75,23 @@ export const community: Community = {
       ],
     },
     {
-      slug: 'tabletop',
-      heading: 'Dungeons & Dragons and other TTRPGs',
-      intro:
-        'We currently have a D&D game that is ongoing (VTT/Discord), and a few guildies have mentioned interest in starting up campaigns or one-shots in the future.',
+      slug: 'other-games',
+      heading: 'Other Games',
+      intro: '',
       entries: [
         {
           slug: 'dnd-campaign',
-          name: 'Keep on the Boarderlands',
+          name: 'D&D: Keep on the Borderlands',
+          status: 'active',
           summary:
-            'D&D 5.5e, VTT/Discord. Just started but currently FULL, unless the DM decides to make it West Marches-style (which he is considering).',
+            'A D&D game that recently started (VTT/Discord). It is FULL, but some guild-members have mentioned interest in starting up campaigns or one-shots in the future.',
         },
-      ],
-    },
-    {
-      slug: 'other-games',
-      heading: 'Other games',
-      intro: 'A lot of us play other games as well, Steam games, and so on.',
-      entries: [
         {
-          slug: 'other-game-one',
-          name: 'Other games',
-          summary: 'TBD',
+          slug: 'tbd',
+          name: 'Other Games',
+          status: 'upcoming',
+          summary:
+            'TBD: Other possibilities exist, but nothing ongoing at the moment.',
         },
       ],
     },

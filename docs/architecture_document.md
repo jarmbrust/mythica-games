@@ -155,7 +155,7 @@ All site copy lives in typed modules under `frontend/src/content/`:
 | ---------------- | ---------------------------------------------- |
 | `site.ts`        | Name, tagline, description, `siteUrl`, nav list, legal note, background image |
 | `home.ts`        | Home page hero CTAs, about copy, closing CTA    |
-| `socials.ts`     | Social links and the Discord invite     |
+| `socials.ts`     | Discord invite and officer Discord contacts     |
 | `community.ts`   | Community hub sections and entries             |
 | `rules.ts`       | Code of Conduct sections and last-updated date |
 

@@ -45,7 +45,7 @@ as authoritative, and do not deploy without replacing it.
 | ---------------- | ----------------------------------------- |
 | `site.ts`        | Name, tagline, description, `siteUrl`, nav, legal note, background image |
 | `home.ts`        | Home page hero CTAs, about copy, closing CTA |
-| `socials.ts`     | Social links and Discord invite |
+| `socials.ts`     | Discord invite and officer Discord contacts |
 | `community.ts`   | Community hub sections and entries        |
 | `rules.ts`       | Code of Conduct sections                  |
 

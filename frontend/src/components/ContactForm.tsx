@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, type SubmitEvent } from 'react';
 
 import type { FieldErrors } from '@/lib/contact-schema';
 
@@ -28,6 +28,9 @@ function isContactApiResponse(value: unknown): value is ContactApiResponse {
 const inputClasses =
   'w-full rounded-md border border-surface-border bg-surface px-3 py-2 text-sm text-foreground placeholder:text-foreground-muted focus:border-accent focus:outline-none';
 
+const emailNote =
+  'Your email is required so we can respond, we neither retain, nor share, email address.';
+
 export function ContactForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [message, setMessage] = useState<string>('');
@@ -36,7 +39,7 @@ export function ContactForm() {
   // catch a same-tick double submit.
   const submitLock = useRef(false);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     if (submitLock.current) {
       return;
@@ -128,7 +131,7 @@ export function ContactForm() {
           htmlFor="name"
           className="block text-sm font-medium text-foreground"
         >
-          Name
+          Discord or Character Name
         </label>
         <input
           id="name"
@@ -151,7 +154,7 @@ export function ContactForm() {
           htmlFor="email"
           className="block text-sm font-medium text-foreground"
         >
-          Email
+          Email *
         </label>
         <input
           id="email"
@@ -226,6 +229,10 @@ export function ContactForm() {
       >
         {status === 'submitting' ? 'Sending…' : 'Send message'}
       </button>
+
+      <p className="-mt-2 text-xs text-foreground-muted">
+        <span aria-hidden="true">*</span> {emailNote}
+      </p>
     </form>
   );
 }

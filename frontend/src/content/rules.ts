@@ -13,48 +13,50 @@ export type Rules = {
 export const rules: Rules = {
   title: 'Code of Conduct',
   intro:
-    'We are a community that does our best to foster an inclusive and safe environment. As such, we ask all members to abide by the following Code of Conduct. The following list is non-exclusive and covers communication in game, on discord, forums, etc. If you have questions on any of it, please contact an officer or the GM.',
-  lastUpdated: '04-Oct-2026',
+    'We are a community that does our best to foster an inclusive and safe environment. As such, we require all members to abide by the following Code of Conduct. If you have questions, please contact an officer or the GM.',
+  lastUpdated: '16-Oct-2026',
   sections: [
     {
       heading: 'Rule 1: Be respectful',
       body: [
-        'This one rule more or less summarizes the rest of this list. It boils down to "don’t be a jerk". This includes harassment and trolling, and not trying to stirring up drama. Treat everyone with respect and don\'t use the anonymity of an avatar turn you into an ass.',
+        'This one rule more or less summarizes the rest of this list. It boils down to "don’t be a jerk". This includes harassment, trolling, and so on. Really, just treat everyone with respect, and don\'t use the anonymity of an online avatar turn you into an ass.',
       ],
     },
     {
       heading:
-        'Rule 2: We continuously strive to foster an accepting and safe environment',
+        'Rule 2: We continuously strive to foster an inclusive and safe environment',
       body: [
-        'We are a LGBTQ+ friendly and an all-around inclusive community. Under no circumstances do we tolerate hate-speech of any kind. Anyone in guild found harassing or trolling other players with racist, sexist, homophobic, xenophobic, and other related topics or slurs open themselves up to a swift /gkick.',
-        'Note: while fantasy-racism and xenophobia exist in the game-lore, when it’s used as a thin veil over obvious real-world bigotry, then it becomes a problem.',
+        'We are a LGBTQ+ friendly and an all-around inclusive community. Under no circumstances do we tolerate hate-speech or behavior that is racist, sexist, homophobic, transphobic, xenophobic, or other related categories. A member found engaging in such behavior, whether in guild channels or not, opens themselves up to a swift /gkick.',
+        "**Note**: We realize that fantasy-racism and xenophobia exist in game throughout the lore, story, and the attitudes of many NPCs, and therefore in-character behavior is fine as far as that goes (especially on an RP server and when done in context). However, when it's used as a thin veil over obvious real-world bigotry, well, then it becomes a problem.",
       ],
     },
     {
-      heading: 'Rule 3: Stay clear of hot-button topics',
+      heading: "Rule 3: Don't be vulgar",
       body: [
-        'Avoid heated topics that easily stir up arguments and shouting-matches. Topics like religion, politics, and so on tend to foment outrage, not encourage legitimate discussion or debate (welcome to the internet btw).',
-        "We live in a time and society where political views are wildly divergent, often ill-informed, and in everyone's face. You may have pure intentions beginning that political discussion, but in public channels it will likely devolve quickly into trolling and name-calling, and a lot of people login to play a fantasy game, not discuss real-world issues.",
+        "We are all adults here, but this doesn't mean we want to deal with content that's overtly or excessively crude, obnoxious, offensive, gross, or gruesome.",
+        'Therefore, in Discord and guild chats especially, we like to keep things PG-13ish, more or less.',
       ],
     },
     {
-      heading: "Rule 4: Don't be vulgar",
+      heading: 'Rule 4: Try to stay clear of hot-button topics',
       body: [
-        "We are all adults here, but this doesn't mean we want to deal with content that's intentionally crude, obnoxious, offensive, gross, or gruesome.",
-        'Therefor, in Discord, guild chats, public chats, forums, and so on, we like to keep things overall civil. As far as the guild text and voice chats, when in doubt, aim for what most regard as PG-13(ish) content in public chats and forums.',
+        "Avoid heated topics that easily stir up arguments and shouting-matches, especially in our Discord or guild chats. Topics like religion, politics, and so on will more likely foment outrage than encourage legitimate discussion or debate. Even not resulting in outrage, it can also leave people who may not 100% agree with the group feel like they don't belong.",
+        'Most importantly, a lot of people do not want to deal with heavy real- world topics in a fantasy game.',
+        "If you choose to engage in discussions like that in public channels, be civil, after all, you are wearing the guild's tag.",
       ],
     },
     {
       heading: 'Rule 5: Do not violate the TOS',
       body: [
-        'You clicked the checkbox and accepted the TOS, so do not engage in behavior that violates it. Do not violate the naming polices, participate in RMT and purchasing from gold-sellers, no botting, no multi-boxing, etc.',
+        "Do not engage in behavior that violates the TOS. Not only can it harm game-play or the in-game economy, but no one wants to get caught up in the bad behavior of others. If we find out you engaged in things like RMT, botting, multi-boxing, and so on, we'll kick you, and likely report you to Blizzard.",
       ],
     },
     {
       heading: 'Rule 6: No Elitism',
       body: [
-        "Many of us have played this game for years, some as early as 2004/2005, and have raided on many levels. However, these days a lot of us have real-life commitments and offline interests. We're probably not spending 20, 30, 40 hours a week in game getting phatl00tz.",
-        "Don't get me wrong, some members do play long hours, and we try our best in instances, raids, and so on, however, we're here for a fun and relaxing time, not being bleeding-edge on anything in game. We also love to help new or returning players learn and enjoy the game!",
+        'Many of us have years of experience under our belts, some going as far back as early 2004/2005, and at all levels of play, from casual to hard-core raiders.',
+        'However, now days we are mostly casual, and are here to have fun, make friends, and relax. We welcome people of all levels, and love to help people who want to get better. Ultimately we understand that **the experience >>> than the lootz.**',
+        "Be welcoming, and don't berate people that are not as uber-uber-l33t as you.",
       ],
     },
   ],
