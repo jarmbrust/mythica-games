@@ -1,6 +1,5 @@
 export const home = {
   heroPrimaryCta: 'Join the Discord',
-  heroSecondaryCta: 'Explore the Community',
   aboutEyebrow: 'About',
   aboutTitle: 'Welcome to Mythica!',
   aboutParagraphs: [

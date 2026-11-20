@@ -1,8 +1,8 @@
 # Decision Log
 
 - **Created:** 2026-09-26
-- **Last Updated:** 2026-10-02
-- **Related:** `docs/architecture_document.md` (v1.3)
+- **Last Updated:** 2026-11-20
+- **Related:** `docs/architecture_document.md` (v1.4)
 
 A record of decisions considered, the alternatives, and what would change them.
 Conclusions only — this file is safe to keep in a public repository.
@@ -25,6 +25,7 @@ Conclusions only — this file is safe to keep in a public repository.
 | 10 | Typed TS content over Markdown/MDX | Applied |
 | 11 | In-memory rate limiting over a shared store | Applied |
 | 12 | Vitest over Jest and Playwright-first | Applied |
+| 13 | Remove the Community route        | Applied |
 
 ---
 
@@ -241,6 +242,27 @@ live end-to-end.
 when the form accumulates more client logic, and a Playwright smoke test after
 launch. Both slot into the same Vitest seam.
 
+## 13. Remove the Community route
+
+**Decision.** Delete the `/community` page and remove its navigation entry and
+home-page call to action. Keep `content/community.ts` in the repository.
+
+**Why.** The page was a placeholder hub for WoW branches and other games, with no
+real content behind it. A nav tab that leads to placeholder copy is worse than
+no tab: it advertises a section the site cannot yet support. Removing the route
+also removes its sitemap entry and canonical URL, so search engines are not
+pointed at an empty page.
+
+**Why keep `content/community.ts`.** The typed copy and the route that rendered
+it are separate concerns. The module is the seam for the eventual community
+content, so retaining it means reintroducing the page is a routing and
+navigation change rather than a rewrite of the content model. It has no
+importers today; that is intentional.
+
+**What would change this.** Real community content — WoW branches, D&D, other
+games — or a database-backed source for it. At that point the page returns, the
+`nav` entry returns with it, and the content module is consumed again.
+
 ---
 
 ## Deferred
@@ -255,3 +277,4 @@ launch. Both slot into the same Vitest seam.
 | Add a Playwright E2E smoke test     | The site is live end-to-end                                      |
 | Scope the `backend/` service        | Blog posts or forum requirements are defined                    |
 | Upgrade to TypeScript 7             | TypeScript 7.1 API ships and `typescript-eslint` widens its peer range |
+| Reintroduce the Community route     | Community content is ready or backed by a data source                |

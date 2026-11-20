@@ -44,9 +44,9 @@ as authoritative, and do not deploy without replacing it.
 | Module           | Holds                                     |
 | ---------------- | ----------------------------------------- |
 | `site.ts`        | Name, tagline, description, `siteUrl`, nav, legal note, background image |
-| `home.ts`        | Home page hero CTAs, about copy, closing CTA |
+| `home.ts`        | Home page hero CTA, about copy            |
 | `socials.ts`     | Discord invite and officer Discord contacts |
-| `community.ts`   | Community hub sections and entries        |
+| `community.ts`   | Community hub sections and entries (retained, unused) |
 | `rules.ts`       | Code of Conduct sections                  |
 
 Pages import from `content/` and never from raw strings, so copy changes are

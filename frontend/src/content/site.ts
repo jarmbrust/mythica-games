@@ -21,7 +21,6 @@ export type NavItem = {
 
 export const nav: readonly NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Community', href: '/community' },
   { label: 'Code of Conduct', href: '/rules' },
   { label: 'Contact', href: '/contact' },
 ];

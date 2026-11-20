@@ -1,14 +1,15 @@
 # Mythica Games — Architecture Document
 
-- **Version:** 1.3 (MVP)
+- **Version:** 1.4 (MVP)
 - **Created:** 2026-09-26
-- **Last Updated:** 2026-10-02
+- **Last Updated:** 2026-11-20
 - **Status:** Active
 
 ## Revision History
 
 | Version | Date | Notes |
 | ------- | ---- | ----- |
+| 1.4 | 2026-11-20 | Removed the `/community` route, its nav entry, sitemap entry, and home-page CTA. `content/community.ts` is retained but currently unreferenced. |
 | 1.3 | 2026-10-02 | Branches route renamed to Community and restructured as a sectioned community hub (WoW branches, Dungeons & Dragons, other games); `content/branches.ts` replaced by `content/community.ts`. |
 | 1.2 | 2026-09-27 | Navigation restructured: Games route replaced by Branches; Rules relabelled Code of Conduct; home page reworked around the guild description. Added `content/home.ts` and `content/branches.ts`; removed `content/games.ts`. Cinzel display font for headings; fixed background image layer. |
 | 1.1 | 2026-09-27 | Contact form: per-IP rate limiting; subject restricted to a single line; validation responses never name the honeypot field. Footer year is client-rendered so it tracks the visitor's local date. |
@@ -81,7 +82,6 @@ live in `pnpm-workspace.yaml`. There is no `.npmrc` in this project.
 | Route              | Rendering | Purpose                            |
 | ------------------ | --------- | --------------------------------- |
 | `/`                | Static    | Home: landing page and guild description |
-| `/community`       | Static    | Community hub (WoW branches, D&D, other games) |
 | `/rules`           | Static    | Code of Conduct                   |
 | `/contact`         | Static    | Contact details and form           |
 | `/api/contact`     | Dynamic   | Contact form submission (POST)    |
@@ -97,6 +97,9 @@ reflect the visitor's local date rather than the build date.
 
 Navigation is driven by `nav` in `content/site.ts`, which is also what generates
 the sitemap — adding a route means adding one entry.
+
+`/community` was removed in v1.4; its content module is retained but has no
+route. See `docs/decision-log.md` §13.
 
 ## 4. Contact Flow
 
@@ -154,9 +157,9 @@ All site copy lives in typed modules under `frontend/src/content/`:
 | Module           | Contents                                       |
 | ---------------- | ---------------------------------------------- |
 | `site.ts`        | Name, tagline, description, `siteUrl`, nav list, legal note, background image |
-| `home.ts`        | Home page hero CTAs, about copy, closing CTA    |
+| `home.ts`        | Home page hero CTA, about copy                  |
 | `socials.ts`     | Discord invite and officer Discord contacts     |
-| `community.ts`   | Community hub sections and entries             |
+| `community.ts`   | Community hub sections and entries (retained, unused) |
 | `rules.ts`       | Code of Conduct sections and last-updated date |
 
 **All values are currently placeholders.** Contact details use

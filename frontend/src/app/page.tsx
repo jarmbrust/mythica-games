@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Container } from '@/components/Container';
 import { InlineMarkup } from '@/components/InlineMarkup';
 import { SectionHeading } from '@/components/SectionHeading';
@@ -27,12 +25,6 @@ export default function HomePage() {
             >
               {home.heroPrimaryCta}
             </a>
-            <Link
-              href="/community"
-              className="rounded-md border border-surface-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface-raised"
-            >
-              {home.heroSecondaryCta}
-            </Link>
           </div>
         </section>
       </Container>

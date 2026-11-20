@@ -61,17 +61,17 @@ All site copy lives in typed modules under `frontend/src/content/`:
 | Module        | Holds                                              |
 | ------------- | -------------------------------------------------- |
 | `site.ts`     | Name, tagline, description, site URL, navigation, legal note, background image |
-| `home.ts`     | Home page hero CTAs, about copy, closing CTA       |
+| `home.ts`     | Home page hero CTA, about copy                     |
 | `socials.ts`  | Discord invite and officer Discord contacts          |
-| `community.ts`| Community hub sections and entries                 |
+| `community.ts`| Community hub sections and entries (retained, unused) |
 | `rules.ts`    | Code of Conduct sections                           |
 
 **Every value is a placeholder.** Replace them before launch:
 
 - `site.ts` — tagline, SEO description
-- `home.ts` — hero, about, and closing call-to-action copy
+- `home.ts` — hero and about copy
 - `socials.ts` — the Discord invite and officer Discord IDs
-- `community.ts` — real section and entry copy
+- `community.ts` — retained for future use; no page renders it yet
 - `rules.ts` — the actual Code of Conduct
 
 Pages and the generated sitemap both read from `content/site.ts`, so adding a
