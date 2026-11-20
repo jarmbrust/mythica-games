@@ -7,7 +7,7 @@ import { SectionHeading } from '@/components/SectionHeading';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Ways to contact the officers.',
+  description: 'Ways to contact the GM and officers.',
   alternates: { canonical: '/contact' },
 };
 
@@ -42,10 +42,12 @@ export default function ContactPage() {
             Send a message
           </h2>
           <p className="mt-2 text-sm text-foreground-muted">
-            While we encourage contact via Discord, and require Discord for
-            guild membership so people have a place to access announcements,
-            organize for group events, and so on, you can also contact us here
-            if you would like via email.
+            We encourage contact via Discord, and require Discord for guild
+            membership so people have a place to access announcements, organize
+            for group events, and so on. Please contact the GM or officers via
+            discord when possible. However, you can also reach the GM, and
+            eventually officers too via the form below if Discord is
+            uncooperative, or other similar reasons.
           </p>
           <div className="mt-4">
             <ContactForm />
