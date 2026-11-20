@@ -17,7 +17,7 @@ export const discordInviteCard: DiscordCard = {
 // and lists the officers' Discord IDs for direct messages.
 export const officerDiscordCard: DiscordCard = {
   label:
-    'You can message any of the following officers for additional information about the guild, or to request an invite.',
+    'You can message any of the following officers for additional information about the guild, or to request an invite (currently listing the GM).',
   href: 'https://discord.com/app',
-  ids: ['Zem3k', '(adding more soon)'],
+  ids: ['Zem3k'],
 };
